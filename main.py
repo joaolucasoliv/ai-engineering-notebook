@@ -1,0 +1,32 @@
+#IBM AI Engineering Professional Certificate **Coding** Notebook: https://www.coursera.org/professional-certificates/ai-engineer
+#Core Notebook with the main notes and summaries on GoodNotes:
+
+#Module 1 [20 hours]: Machine Learning with Python and Introduction to ML
+#In this module, you will explore foundational machine learning concepts that prepare you for hands-on modeling with Python. You will explain the relevance of Python and scikit-learn in machine learning, summarize the IBM AI Engineering certification path, and classify common types of learning algorithms. You’ll outline the stages of the machine learning model lifecycle and describe what a typical day looks like for a machine learning engineer. You will also compare key roles in the AI field, identify widely used open-source tools, and learn to utilize scikit-learn to build and evaluate simple models.
+# Python, Pandas and NumPy and Data Preparation and data analysis with Python are key requirements
+
+
+#Module 2 [10 hours]: Introduction to Deep Learning and Neural Networks
+
+#Module 3 [23 hours]: Deep Learning with Keras and Tensorflow
+
+#Module 4 [19 hours]: Introduction to Neural Networks and PyTorch
+
+#Module 5 [21 hours]: Deep Learning with PyTorch
+
+#Module 6 [15 hours]: AI Capstone Project with Deep Learning
+
+#Module 7 [6 hours]: Generative AI and LLMS: Architecture and Data Preparation
+
+#Module 8 [10 hours]: Gen AI Foundational Models for NLP and Language Understanding
+
+#Module 9 [9 hours]: Generative AI Language Modeling with Transformers
+
+#Module 10 [8 hours]: Generative AI Engineering and Fine-Tuning Transformers
+
+#Module 11 [9 hours]: Generative AI Advanced Fine-Tuning for LLMs
+
+#Module 12 [9 hours]: Fundamentals of AI Agents Using RAG and LangChain
+
+#Module 13 [9 hours]: Project: Generative AI Applications with RAG and LangChain
+
