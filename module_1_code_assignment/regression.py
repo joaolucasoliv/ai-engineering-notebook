@@ -16,8 +16,6 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import train_test_split
 
-from module_1_code_assignment.classification import RANDOM_STATE, number_roads, crack_severity, daily_traffic, \
-    prediction_comparison
 
 # random_state ensures that we generate the same random data -> every time we run the program
 
@@ -28,7 +26,7 @@ RANDOM_STATE = 42
 # step 1. CREATE A SYNTHETIC DATASET
 # ======================
 
-random_generator = np.random.default_rng(RANDOM_STATE) #check
+random_generator = np.random.default_rng(RANDOM_STATE)
 
 #create the number of roads in our dataset (fictional)
 number_roads = 1_000
@@ -223,7 +221,7 @@ r_squared = r2_score(y_test, y_predicted)
 print("\nModel Evaluation:")
 print(f"Mean Absolute Error: ${mae:,.2f}")
 print(f"Root Mean Squared Error: ${rmse:,.2f}")
-print(f"R-Squared Score: ${r_squared:.4f}") #check
+print(f"R-Squared Score: ${r_squared:.4f}") # 4 decimal houses
 
 # ======================
 # step 9. INSPECT WHAT THE MODEL LEARNED
@@ -265,7 +263,7 @@ plt.figure(figsize=(8, 6))
 plt.scatter(
     y_test,
     y_predicted,
-    alpha=0.6, #check
+    alpha=0.6, # defines a 60% opacity (40% transparency) level for markers, lines, or fills
 )
 
 # find the minimum and maximum values so that we can draw the perfect-prediction reference line
@@ -275,8 +273,8 @@ maximum_cost = max(y_test.max(), y_predicted.max())
 
 # Points directly on this line represents the perfect predictions
 plt.plot (
-    [minimum_cost, maximum_cost],
-    [minimum_cost, maximum_cost], #check
+    [minimum_cost, maximum_cost], # x coordinates
+    [minimum_cost, maximum_cost], # y coordinates
     linestyle="--",
 )
 
@@ -343,5 +341,7 @@ print(new_road)
 
 print(
     "\nEstimated maintenance cost: "
-    f"${new_road_prediction[0]:,.2f}" #check
+    f"${new_road_prediction[0]:,.2f}" #[0] is the first prediction
+                                      # , is the separador de milhares
+                                      # .2f is duas casas decimais
 )

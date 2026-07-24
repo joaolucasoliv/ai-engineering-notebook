@@ -16,9 +16,6 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import train_test_split
 
-from module_1_code_assignment.classification import RANDOM_STATE, number_roads, crack_severity, daily_traffic, \
-    prediction_comparison
-
 # random_state ensures that we generate the same random data -> every time we run the program
 
 RANDOM_STATE = 42
