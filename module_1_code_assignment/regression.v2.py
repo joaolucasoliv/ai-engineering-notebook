@@ -16,6 +16,7 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import train_test_split
 
+
 # random_state ensures that we generate the same random data -> every time we run the program
 
 RANDOM_STATE = 42
@@ -38,9 +39,10 @@ potholes = random_generator.integers(
     )
 
 # crack severity from 0 to 10 -> a higher value means more severe cracking.
-crack_severity = random_generator.integers(
-        low=500,
-        high=25_000,
+# use uniform() so the values are decimals (e.g. 7.5), matching the user input later.
+crack_severity = random_generator.uniform(
+        low=0,
+        high=11,
         size=number_roads,
     )
 
@@ -219,8 +221,8 @@ r_squared = r2_score(y_test, y_predicted)
 
 print("\nModel Evaluation:")
 print(f"Mean Absolute Error: ${mae:,.2f}")
-print(f"Root Mean Squared Error: ${rmse:,.2f}")
-print(f"R-Squared Score: ${r_squared:.4f}") #check
+print(f"Root Mean Squared Error: {rmse:,.2f}")
+print(f"R-Squared Score: {r_squared:.4f}") # R² is a ratio, not dollars -> no $ sign
 
 # ======================
 # step 9. INSPECT WHAT THE MODEL LEARNED
@@ -247,10 +249,10 @@ print(coefficient)
 # print an easier-to-read explanation of each coefficient
 print("\nCoefficient Interpretation:")
 
-for feature, coefficient in zip(feature, model.coef_):
+for name, coef in zip(feature, model.coef_):
     print(
-        f"A one-unit increase in {feature} changes the "
-        f"predicted cost by approx. ${coefficient:,.2f}."
+        f"A one-unit increase in {name} changes the "
+        f"predicted cost by approx. ${coef:,.2f}."
     )
 
 # ======================
@@ -297,8 +299,8 @@ residuals = y_test - y_predicted
 
 plt.figure(figsize=(8, 6))
 plt.scatter(
-    y_test,
-    y_predicted,
+    y_predicted,   # x-axis: what the model predicted
+    residuals,     # y-axis: how far off it was
     alpha=0.6,
 )
 
@@ -353,7 +355,7 @@ print("Enter the information below:\n")
 # input always returns text -> so we can convert text answers into numbers using int() to whole numbers and flot() for decimals numbers
 
 potholes_input = int(
-    input("Number of potholes: ")
+    input("Number of potholes:")
 )
 
 crack_severity_input = float(
