@@ -123,7 +123,7 @@ print("-" * 50)
 print(data.head())
 
 print("\nDataset Size")
-print("-" * 50)
+print("-" * 50) #line with 50 lines in the screen
 print(data.shape)
 
 print("\nClass Distribution")
